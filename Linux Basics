@@ -1,0 +1,13 @@
+Below are the linux commands I used for this project to setup and run the video hosting service.
+
+1) In raspberry pi : hostname -I ( to get the IP )
+2) Make sure if ssh is enabled : sudo raspi-config - Interface options - SSH - Enable
+2) To connect via ssh : ssh pi@<IP>
+3) To config camera in ssh : sudo raspi-config - Interface options - Camera - Enable 
+4) To update and upgrade new packages : sudo apt update && sudo apt upgrade -y
+5) Download all the neccessary softwares : sudo apt install python3-opencv python3-picamera2 python3-flask -y
+6) You may also need : sudo apt install libcamera-apps python3-numpy -y
+7) Now create a python file : vi camstream.py ( I'm using vim cause its fast, you can even do it without vim)
+8) Paste the python code : Just press Alt + Shift + V ( cause vim doesn't have ^V )
+9) Now run the code : python3 camstream.py 
+10) If the program is successfull , the terminal will show that the video is being hosted on the link ... blah blah blah, click the website with raspi's IP and there ypu can see the live video.
